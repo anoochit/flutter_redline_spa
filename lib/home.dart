@@ -218,7 +218,7 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                 BlockContent(screenType: screenType, text: "Mobile App", icon: Icons.mobile_friendly),
                 BlockContent(screenType: screenType, text: "Web App", icon: Icons.dashboard),
                 BlockContent(screenType: screenType, text: "Cloud", icon: Icons.cloud),
-                BlockContent(screenType: screenType, text: "dApp", icon: Icons.monetization_on),
+                BlockContent(screenType: screenType, text: "Blockchain", icon: Icons.monetization_on),
                 BlockContent(screenType: screenType, text: "Maintenance", icon: Icons.construction),
                 BlockContent(screenType: screenType, text: "Tech Consult", icon: Icons.comment_rounded),
               ],
@@ -267,11 +267,12 @@ class _ProductPortfolioWidgetState extends State<ProductPortfolioWidget> {
               spacing: 10.0,
               runSpacing: 10.0,
               children: [
+                BlockProductContent(screenType: screenType, text: "Zeal", description: "IoT Platform", asset: "assets/images/logo_zeal.png"),
                 BlockProductContent(screenType: screenType, text: "0ood", description: "IoT Dashboard", asset: "assets/images/logo_0ood.png"),
                 BlockProductContent(screenType: screenType, text: "NutPed", description: "Private Chat", asset: "assets/images/logo_nutped.png"),
                 BlockProductContent(screenType: screenType, text: "NutPed Dash", description: "Web Dashboard", asset: "assets/images/logo_nutped_dash.png"),
-                BlockProductContent(screenType: screenType, text: "Dementia", description: "Alzheimer Test", asset: "assets/images/logo_dementia.png"),
-                BlockProductContent(screenType: screenType, text: "Blood Presure Log", description: "Blood Pressure Log", asset: "assets/images/logo_blood_pressure_log.png"),
+                BlockProductContent(screenType: screenType, text: "Dementia", description: "Health Care", asset: "assets/images/logo_dementia.png"),
+                BlockProductContent(screenType: screenType, text: "Blood Presure Log", description: "Health Care", asset: "assets/images/logo_blood_pressure_log.png"),
                 BlockProductContent(screenType: screenType, text: "PinkyBink", description: "Dating App", asset: "assets/images/logo_pinkybink.png"),
                 BlockProductContent(screenType: screenType, text: "PinkyBink Console", description: "Mobile Dashboard", asset: "assets/images/logo_pinkybink_console.png"),
                 BlockProductContent(screenType: screenType, text: "DoggyGirl", description: "Dating App", asset: "assets/images/logo_doggygirl.png"),
@@ -346,6 +347,36 @@ class _ContactWidgetState extends State<ContactWidget> {
         child: Column(
           children: [
             TextHeadingContent(text: "ติดต่อเรา"),
+            SizedBox(height: 64),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.8,
+              padding: EdgeInsets.all(64),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.7),
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("RedLine Software", style: TextStyle(fontSize: 22.0)),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("107 หมู่ 10 ต.สุรนารี อ.เมือง จ.นครราชสีมา 30000", style: TextStyle(fontSize: 18.0)),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("โทรศัพท์ 089 843 3717", style: TextStyle(fontSize: 18.0)),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Email info@redlinesoft.net", style: TextStyle(fontSize: 18.0)),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),

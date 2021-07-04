@@ -118,7 +118,7 @@ class BlockProductContent extends StatelessWidget {
           ? (MediaQuery.of(context).size.width * 0.8)
           : (screenType == "tablet")
               ? (MediaQuery.of(context).size.width * 0.45)
-              : (MediaQuery.of(context).size.width * 0.26),
+              : (MediaQuery.of(context).size.width * 0.15),
       child: Center(
         child: Column(
           children: [
