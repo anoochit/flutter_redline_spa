@@ -117,8 +117,8 @@ class BlockProductContent extends StatelessWidget {
       width: (screenType == "mobile")
           ? (MediaQuery.of(context).size.width * 0.8)
           : (screenType == "tablet")
-              ? (MediaQuery.of(context).size.width * 0.45)
-              : (MediaQuery.of(context).size.width * 0.15),
+              ? (MediaQuery.of(context).size.width * 0.5)
+              : (MediaQuery.of(context).size.width * 0.25),
       child: Center(
         child: Column(
           children: [
@@ -126,17 +126,17 @@ class BlockProductContent extends StatelessWidget {
               padding: EdgeInsets.all(24),
               child: Image.asset(
                 asset,
-                width: 128,
+                width: 120,
               ),
             ),
             Text(
               text,
-              style: TextStyle(fontSize: (screenType == "mobile") ? 18.0 : 22.0, fontWeight: FontWeight.bold),
-            ),
-            Text(
-              description,
               style: TextStyle(fontSize: (screenType == "mobile") ? 18.0 : 22.0),
             ),
+            // Text(
+            //   description,
+            //   style: TextStyle(),
+            // ),
           ],
         ),
       ),

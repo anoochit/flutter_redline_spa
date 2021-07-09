@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_redline_web2/widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
@@ -202,31 +203,34 @@ class _ServiceWidgetState extends State<ServiceWidget> {
         ),
       ),
       child: SingleChildScrollView(
-        child: Column(
-          children: [
-            TextHeadingContent(text: "พัฒนาผลิตภัณฑ์ที่ใช้งานได้"),
-            TextSubHeadingContent(
-              screenType: screenType,
-              text:
-                  "เรารู้ว่าคุณมีไอเดียมากมาย มากเสียจนเริ่มต้นไม่ถูก ให้เราช่วยเหลือคุณพัฒนาออกมาให้เป็นผลิตภัณฑ์ที่ไม่ได้เป็นแค่ไอเดียในกระดาษอีกต่อไป ด้วยประสบการณ์ มากกว่า 20 ปี ด้านการออกแบบพัฒนาผลิตภัณฑ์ทั้งฮาร์ดแวร์และซอฟต์แวร์ เราสามารถช่วยคุณสร้างผลิตภัณฑ์ที่ใช้งานได้จริงพร้อมใช้งาน",
-            ),
-            ButtonToURL(title: "ขอใบเสนอราคา", icon: Icons.qr_code_scanner, url: "https://forms.gle/FzyueDBfHDvhh9EF6"),
-            Wrap(
-              spacing: 10.0,
-              runSpacing: 10.0,
-              children: [
-                BlockContent(screenType: screenType, text: "Mobile App", icon: Icons.mobile_friendly),
-                BlockContent(screenType: screenType, text: "Web App", icon: Icons.dashboard),
-                BlockContent(screenType: screenType, text: "Cloud", icon: Icons.cloud),
-                BlockContent(screenType: screenType, text: "Blockchain", icon: Icons.monetization_on),
-                BlockContent(screenType: screenType, text: "Maintenance", icon: Icons.construction),
-                BlockContent(screenType: screenType, text: "Tech Consult", icon: Icons.comment_rounded),
-              ],
-            ),
-            SizedBox(
-              height: 64,
-            )
-          ],
+        child: Container(
+          width: 960,
+          child: Column(
+            children: [
+              TextHeadingContent(text: "พัฒนาผลิตภัณฑ์ที่ใช้งานได้"),
+              TextSubHeadingContent(
+                screenType: screenType,
+                text:
+                    "เรารู้ว่าคุณมีไอเดียมากมาย มากเสียจนเริ่มต้นไม่ถูก ให้เราช่วยเหลือคุณพัฒนาออกมาให้เป็นผลิตภัณฑ์ที่ไม่ได้เป็นแค่ไอเดียในกระดาษอีกต่อไป ด้วยประสบการณ์ มากกว่า 20 ปี ด้านการออกแบบพัฒนาผลิตภัณฑ์ทั้งฮาร์ดแวร์และซอฟต์แวร์ เราสามารถช่วยคุณสร้างผลิตภัณฑ์ที่ใช้งานได้จริงพร้อมใช้งาน",
+              ),
+              ButtonToURL(title: "ขอใบเสนอราคา", icon: Icons.qr_code_scanner, url: "https://forms.gle/FzyueDBfHDvhh9EF6"),
+              Wrap(
+                spacing: 10.0,
+                runSpacing: 10.0,
+                children: [
+                  BlockContent(screenType: screenType, text: "Mobile App", icon: Icons.mobile_friendly),
+                  BlockContent(screenType: screenType, text: "Web App", icon: Icons.dashboard),
+                  BlockContent(screenType: screenType, text: "Cloud", icon: Icons.cloud),
+                  BlockContent(screenType: screenType, text: "Blockchain", icon: Icons.monetization_on),
+                  BlockContent(screenType: screenType, text: "Maintenance", icon: Icons.construction),
+                  BlockContent(screenType: screenType, text: "Tech Consult", icon: Icons.comment_rounded),
+                ],
+              ),
+              SizedBox(
+                height: 64,
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -263,20 +267,23 @@ class _ProductPortfolioWidgetState extends State<ProductPortfolioWidget> {
                   "มีลูกค้ามากมายที่เข้ามาพบเรา มาพร้อมกับไอเดียที่พรั่งพรูและอยากที่จะพัฒนาผลิตภัณฑ์ด้านซอฟต์แวร์แต่ไม่รู้ว่าจะเริ่มอย่างไร เราช่วยค้นหาความต้องการและสิ่งที่เป็นคุณค่าที่แท้จริงให้กับลูกค้า ตลอดจน สร้างผลิตภัณพ์ที่มีคุณค่าให้กับลูกค้าของคุณอย่างแท้จริง",
             ),
             ButtonToURL(title: "ดาวน์โหลดเอกสาร", icon: Icons.download, url: "https://docs.google.com/presentation/d/10hQv2H9I52tMH-QM4Gb_FoXouVZgO8ZrPMvNN6vhtTU/edit?usp=sharing"),
-            Wrap(
-              spacing: 10.0,
-              runSpacing: 10.0,
-              children: [
-                BlockProductContent(screenType: screenType, text: "Zeal", description: "IoT Platform", asset: "assets/images/logo_zeal.png"),
-                BlockProductContent(screenType: screenType, text: "0ood", description: "IoT Dashboard", asset: "assets/images/logo_0ood.png"),
-                BlockProductContent(screenType: screenType, text: "NutPed", description: "Private Chat", asset: "assets/images/logo_nutped.png"),
-                BlockProductContent(screenType: screenType, text: "NutPed Dash", description: "Web Dashboard", asset: "assets/images/logo_nutped_dash.png"),
-                BlockProductContent(screenType: screenType, text: "Dementia", description: "Health Care", asset: "assets/images/logo_dementia.png"),
-                BlockProductContent(screenType: screenType, text: "Blood Presure Log", description: "Health Care", asset: "assets/images/logo_blood_pressure_log.png"),
-                BlockProductContent(screenType: screenType, text: "PinkyBink", description: "Dating App", asset: "assets/images/logo_pinkybink.png"),
-                BlockProductContent(screenType: screenType, text: "PinkyBink Console", description: "Mobile Dashboard", asset: "assets/images/logo_pinkybink_console.png"),
-                BlockProductContent(screenType: screenType, text: "DoggyGirl", description: "Dating App", asset: "assets/images/logo_doggygirl.png"),
-              ],
+            Container(
+              width: MediaQuery.of(context).size.width * 0.8,
+              child: Wrap(
+                spacing: 10.0,
+                runSpacing: 10.0,
+                children: [
+                  BlockProductContent(screenType: screenType, text: "Zeal", description: "IoT Platform", asset: "assets/images/logo_zeal.png"),
+                  //BlockProductContent(screenType: screenType, text: "0ood", description: "IoT Dashboard", asset: "assets/images/logo_0ood.png"),
+                  BlockProductContent(screenType: screenType, text: "NutPed", description: "Private Chat", asset: "assets/images/logo_nutped.png"),
+                  BlockProductContent(screenType: screenType, text: "NutPed Dash", description: "Web Dashboard", asset: "assets/images/logo_nutped_dash.png"),
+                  BlockProductContent(screenType: screenType, text: "Dementia", description: "Health Care", asset: "assets/images/logo_dementia.png"),
+                  BlockProductContent(screenType: screenType, text: "Blood Presure Log", description: "Health Care", asset: "assets/images/logo_blood_pressure_log.png"),
+                  BlockProductContent(screenType: screenType, text: "PinkyBink", description: "Dating App", asset: "assets/images/logo_pinkybink.png"),
+                  //BlockProductContent(screenType: screenType, text: "PinkyBink Console", description: "Mobile Dashboard", asset: "assets/images/logo_pinkybink_console.png"),
+                  //BlockProductContent(screenType: screenType, text: "DoggyGirl", description: "Dating App", asset: "assets/images/logo_doggygirl.png"),
+                ],
+              ),
             ),
             SizedBox(
               height: 64,
@@ -415,7 +422,7 @@ String checkScreenSize(BuildContext context) {
 
   log(scWidth.toString());
 
-  if (scWidth < 412) {
+  if (scWidth < 769) {
     return "mobile";
   } else if (scWidth < 960) {
     return "tablet";
