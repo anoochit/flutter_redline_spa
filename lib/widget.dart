@@ -41,7 +41,7 @@ class TextHeadingContent extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.6,
       alignment: Alignment.center,
       child: FittedBox(
-        child: Text(text, style: kTitleHeader),
+        child: Text(text, style: TextStyle(fontSize: Theme.of(context).textTheme.headline2!.fontSize, color: Colors.white)),
       ),
     );
   }
@@ -68,23 +68,22 @@ class BlockContent extends StatelessWidget {
         border: Border.all(color: Colors.white),
         borderRadius: BorderRadius.circular(20),
       ),
-      width: (screenType == "mobile")
-          ? (MediaQuery.of(context).size.width * 0.8)
-          : (screenType == "tablet")
-              ? (MediaQuery.of(context).size.width * 0.5)
-              : (MediaQuery.of(context).size.width * 0.25),
-      child: Center(
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.all(24),
-              child: Icon(icon, size: 80),
-            ),
-            Text(
-              text,
-              style: TextStyle(fontSize: (screenType == "mobile") ? 18.0 : 22.0),
-            ),
-          ],
+      child: LayoutBuilder(
+        builder: (context, constraints) => Center(
+          child: Column(
+            children: [
+              Container(
+                width: constraints.maxWidth * 0.8,
+                child: FittedBox(
+                  child: Icon(icon),
+                ),
+              ),
+              Text(
+                text,
+                style: Theme.of(context).textTheme.headline6,
+              ),
+            ],
+          ),
         ),
       ),
     );

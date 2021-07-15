@@ -15,9 +15,11 @@ class MyApp extends StatelessWidget {
       title: 'RedLine Software',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        primaryColor: Colors.white,
         textTheme: GoogleFonts.promptTextTheme(
           Theme.of(context).textTheme,
         ),
+        canvasColor: Colors.white,
       ),
       home: HomePage(),
     );
