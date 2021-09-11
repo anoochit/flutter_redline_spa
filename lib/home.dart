@@ -1,7 +1,5 @@
 import 'dart:developer';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_redline_web2/widget.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -29,6 +27,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         iconTheme: IconThemeData.fallback(),
         title: Center(
           child: Container(
@@ -69,14 +68,14 @@ class _HomePageState extends State<HomePage> {
                           );
                         },
                       ),
-                ElevatedButton(
-                  child: Text("Quotation"),
-                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-                  onPressed: () async {
-                    var url = "https://forms.gle/FzyueDBfHDvhh9EF6";
-                    await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
-                  },
-                )
+                // ElevatedButton(
+                //   child: Text("Quotation"),
+                //   style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                //   onPressed: () async {
+                //     var url = "https://forms.gle/FzyueDBfHDvhh9EF6";
+                //     await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
+                //   },
+                // )
               ],
             ),
           ),
@@ -102,7 +101,7 @@ class _HomePageState extends State<HomePage> {
               ]
             : [],
       ),
-      body: SingleChildScrollView(
+      body: Scrollbar(
         controller: scrollController,
         child: LayoutBuilder(
           builder: (context, constraints) => SingleChildScrollView(
@@ -114,15 +113,16 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 32),
                   // service section
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 32.0),
+                    padding: const EdgeInsets.symmetric(vertical: 32.0, horizontal: 32.0),
                     child: Text(
                       "\"We turn ideas into a product\"",
                       style: Theme.of(context).textTheme.headline3,
                     ),
                   ),
-                  SizedBox(height: 64),
+                  SizedBox(height: 32),
                   Container(
-                    padding: EdgeInsets.all(16),
+                    width: constraints.maxWidth * 0.8,
+                    height: 400,
                     child: Image.asset("assets/images/undraw_programming_2svr.png"),
                   ),
                   SizedBox(height: 64),
@@ -246,7 +246,7 @@ class _HomePageState extends State<HomePage> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
-                                "Blockchain technology does not stop at the world of finance and banking such as Crypto Currency, DeFi only. We can apply Blockchain technology in other fields such as NFT, Voting, Digital Token and etc. We are ready to help you step into the technology of this future.",
+                                "Blockchain technology does not stop at the world of finance and banking such as Crypto Currency, DeFi only. We can apply Blockchain technology in other fields such as NFT, Voting, Digital Token and etc.",
                                 style: Theme.of(context).textTheme.headline6,
                               ),
                             ),
